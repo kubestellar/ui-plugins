@@ -1,0 +1,41 @@
+apiVersion: hello-world/v1
+kind: Plugin
+metadata:
+  name: "hello-world"
+  version: "1.0.0"
+  author: "admin"
+  description: "Simple hello world plugin with name greeting"
+
+spec:
+  # WASM Configuration
+  wasm:
+    file: "hello-world.wasm"
+    entrypoint: "main"
+    memory_limit: "32MB"
+
+  # Build Information
+  build:
+    go_version: "1.21"
+    tinygo_version: "0.30.0"
+
+  # Backend Integration
+  backend:
+    enabled: true
+    routes:
+      - path: "/hello"
+        methods: ["POST"]
+        handler: "handle_hello"
+      - path: "/status"
+        methods: ["GET"]
+        handler: "handle_status"
+
+  # Frontend Integration
+  frontend:
+    enabled: true
+    navigation:
+      - label: "Hello World"
+        icon: "icon.svg"
+        path: "/plugins/hello-world"
+    routes:
+      - path: "/plugins/hello-world"
+        component: "plugin-component.js"
