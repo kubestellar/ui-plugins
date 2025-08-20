@@ -14,6 +14,10 @@ This plugin creates:
 - Frontend form to input name and display greeting
 - Complete integration example
 
+## What we are going to create
+
+![Alt text](./assets/Screenshot%202025-08-20%20at%204.50.35 PM.png)
+
 ## Project Structure
 
 ```
