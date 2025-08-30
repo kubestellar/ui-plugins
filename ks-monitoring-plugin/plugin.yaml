@@ -1,0 +1,32 @@
+apiVersion: kubestellar/v1
+kind: Plugin
+metadata:
+  name: "KS-Monitoring"
+  version: "1.0.0"
+  author: "Kubestellar"
+  description: "KS Monitoring"
+
+spec:
+  backend:
+    enabled: false
+
+  frontend:
+    enabled: true
+    staticDir: "dist"
+    entry: "index.html"
+
+    navigation:
+      - label: "KS Monitoring"
+        path: "/plugins/ks-monitoring"
+
+    routes:
+      - path: "/plugins/ks-monitoring"
+        entry: "index.html"
+
+  info:
+    homepage: ""
+    support: ""
+    tags:
+      - monitoring
+      - grafana
+      - frontend-only
