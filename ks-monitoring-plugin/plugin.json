@@ -1,0 +1,12 @@
+{
+  "id": "KS-Monitoring-Grafana",
+  "type": "app",
+  "name": "KS Monitoring",
+  "info": {
+    "description": "A plugin for monitoring Grafana dashboards.",
+    "author": {
+      "name": "Kubestellar"
+    },
+    "version": "1.0.0"
+  }
+}
