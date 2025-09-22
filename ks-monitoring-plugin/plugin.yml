@@ -1,7 +1,7 @@
 apiVersion: kubestellar/v1
 kind: Plugin
 metadata:
-  name: "ks-monitoring-v5"
+  name: "ks-monitoring-1"
   version: "1.0.0"
   author: "admin"
   description: "KS Monitoring"
@@ -9,7 +9,7 @@ metadata:
 spec:
   backend:
     enabled: false
-    wasmFile: "ks-monitoring-v5.wasm"
+    wasmFile: "ks-monitoring-1.wasm"
 
   frontend:
     enabled: true
