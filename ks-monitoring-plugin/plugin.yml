@@ -4,7 +4,7 @@ metadata:
   name: "ks-monitoring-v5"
   version: "1.0.0"
   author: "admin"
-  description: "KS Monitoring — frontend-only plugin for monitoring dashboards"
+  description: "KS Monitoring"
 
 spec:
   backend:
