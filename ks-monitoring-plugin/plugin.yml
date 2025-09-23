@@ -1,20 +1,22 @@
 apiVersion: kubestellar/v1
 kind: Plugin
 metadata:
-  name: "ks-monitoring-1"
+  name: "ks-monitoring-plugin"
   version: "1.0.0"
   author: "admin"
-  description: "KS Monitoring"
+  description: "KS Monitoring Plugin"
 
 spec:
+
+  wasm:
+    file: "ks-monitoring.wasm"
+    entrypoint: "main"
+
   backend:
-    enabled: false
-    wasmFile: "ks-monitoring-1.wasm"
+    enabled: true
 
   frontend:
     enabled: true
-    staticDir: "dist"
-    entry: "index.html"
 
     navigation:
       - label: "KS Monitoring"
@@ -23,7 +25,7 @@ spec:
 
     routes:
       - path: "/plugins/ks-monitoring"
-        entry: "index.html"
+        entry: "plugin-component.js"
 
   info:
     homepage: ""

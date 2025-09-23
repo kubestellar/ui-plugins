@@ -1,6 +1,6 @@
-import React from 'react';
+const React = window.React;
 
-const App = () => {
+const App = ({ pluginId, theme }) => {
   return (
     <div style={{ height: '100vh', width: '100vw', margin: 0, padding: 0 }}>
       <iframe
