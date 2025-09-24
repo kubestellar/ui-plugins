@@ -25,7 +25,7 @@ spec:
 
     routes:
       - path: "/plugins/ks-monitoring"
-        entry: "plugin-component.js"
+        component: "plugin-component.js"
 
   info:
     homepage: ""
