@@ -59,7 +59,3 @@ cd frontend && npm run dev
 
 # Rebuild backend
 make build
-
-# Package for testing
-make package
-```
