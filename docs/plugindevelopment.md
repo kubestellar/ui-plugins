@@ -39,7 +39,7 @@ examples/hello-world/
 
 ## Step 1: Create the Backend (WASM)
 
-Create `main.go`:
+Create `main.go` (in root folder /examples/hello-world):
 
 ```go
 //go:build wasm
@@ -157,7 +157,7 @@ func main() {
 
 ## Step 2: Create Plugin Manifest
 
-Create `plugin.yml`:
+Create `plugin.yml` (in root folder /examples/hello-world):
 
 ```yaml
 apiVersion: hello-world/v1
@@ -207,6 +207,10 @@ spec:
 
 ### Initialize project (use react)
 ```
+mkdir frontend
+
+cd frontend
+
 npm create vite@latest
 
 #Install dev dependencies
@@ -617,7 +621,7 @@ cd frontend
 npm run build
 ```
 
-Build `backend` at root
+Build `backend` at root (cd /examples/hello-world)
 ```
 make build
 ```
