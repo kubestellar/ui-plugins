@@ -1,0 +1,41 @@
+apiVersion: k8s-get/v1
+kind: Plugin
+metadata:
+  name: "k8s-get"
+  version: "1.0.1"
+  author: "admin"
+  description: "Simple k8s get plugin to get k8s objects"
+
+spec:
+  # WASM Configuration
+  wasm:
+    file: "k8s-get.wasm"
+    entrypoint: "main"
+    memory_limit: "32MB"
+
+  # Build Information
+  build:
+    go_version: "1.21"
+    tinygo_version: "0.30.0"
+
+  # Backend Integration
+  backend:
+    enabled: true
+    routes:
+      - path: "/k8s-get"
+        methods: ["POST"]
+        handler: "handle_k8s_get"
+      - path: "/status"
+        methods: ["GET"]
+        handler: "handle_status"
+
+  # Frontend Integration
+  frontend:
+    enabled: true
+    navigation:
+      - label: "k8s Get"
+        icon: "icon.svg"
+        path: "/plugins/k8s-get"
+    routes:
+      - path: "/plugins/k8s-get"
+        component: "plugin-component.js"
